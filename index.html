@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meals on Wheels</title>
+    <link rel="shortcut icon" href="food logo.png" type="image/x-icon" width="50%">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header>
+        <img width="17%" viewBox="0 0 23 24" fill="none" src="Screenshot 2024-08-03 202917.png" alt="">
+        <div class="topnav">
+            <a href="#home">Home</a> <!--  class="active" */  -->
+            <a href="#offers">Offers</a>
+            <a href="#help">Help</a>
+            <a href="#signin" class="sign"><span onclick="openNav()">Sign In</span></a>
+        </div>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#215;</a>
+        <form action="action_page.php" style="border:1px solid #ccc">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <label for="phn-number"><b>Mobile Number</b></label>
+                <input type="text" placeholder="Mobile Number" name="phn-number" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="home" id="home">
+        <img src="pizza.jpg" alt="" width="100%">
+    </div>
+    <div class="top-left">
+        <div class="dropdown">
+            <select id="state" name="state">
+                <box-icon name='location-plus' type='solid' flip='horizontal' color='#f56d24'></box-icon>
+
+                <option value="australia">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Mathura">Mathura</option>
+            </select>
+        </div>
+        <br>
+        <h1>Get <span class="deli">Delicious</span> <br> Food Right Away</h1> <br>
+        <h5>Because who can resist <br> a tasty meal at the push of a button?</h5>
+        <button onclick="document.getElementById('id01').style.display='block'" class="button">Get Started</button>
+        <!-- The Modal (contains the Sign Up form) -->
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal"></span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container">
+                    <h1>Get in touch</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+                    <br>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                    <br>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                        Remember me
+                    </label>
+
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &
+                            Privacy</a>.
+                    </p>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signup">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <div class="sticky" id="mySidenav">
+        <div class="boxes"  id="mySidenav">
+            <div class="box" id="id01">
+                <img src="man delivery.png" width="auto" height="auto">
+            </div>
+            <div class="box">
+                <h3><i class='bx bxs-circle bx-fade-down bx-xs' style='color:#ff811b'></i> Near Your Location </h3>
+                <h4>Call Now - 8989897856</h4>
+            </div>
+        </div>
+    </div>
+    <div class="Sndpage">
+        <div class="head">
+            <h3>How it Works</h3>
+            <h1>What We Serve</h1>
+            <p>Highlighting the quality and care we put into every order. <br> Your food isn’t just delivered - it’s an
+                experience.</p>
+        </div>
+        <div class="column">
+            <img src="easy order.png" alt="Explore" width="200vw" height=200vh">
+            <div class="container">
+                <h1>Easy To Order</h1>
+                <p class="title">
+                    You can order through both the website and app.
+                </p>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="delivery.png" alt="" width="200vw" height=200vh">
+            <div class="container">
+                <h1>Fastest Delivery</h1>
+                <p class="title">Delivery will be right on time</p>
+            </div>
+        </div>
+        <div class="column">
+            <img src="quality.png" alt="" width="200vw" height=200vh">
+            <div class="container">
+                <h1>Best Quality</h1>
+                <p class="title">
+                    The best quality of food for you
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="offer">
+        <img id="offers" src="offer.png" alt="" width="100%">
+        <div class="top-left offertext">
+            <h1>Get <span class="orange">50% off </span> On <br> Your <span class="orange">First Order!</span></h1>
+            <p>If you order Food Delivery from us for the first time then we have <br> a gift- 50% discount for you in
+                your
+                first order. You just need to register <br> and order your favourite food.</p>
+            <button onclick="document.getElementById('id01').style.display='block'" class="button">Get Started</button>
+        </div>
+    </div>
+    <div class="scroll">
+        <h2>What's on your Mind?</h2>
+        <div class="arrow">
+            <button class="left" onclick="leftScroll()">
+                <i class='bx bxs-chevrons-left bx-flip-vertical bx-md' style='color:#ffffff'></i>
+            </button>
+            <button class="right" onclick="rightScroll()">
+                <i class='bx bxs-chevrons-right bx-md' style='color:#ffffff'></i>
+            </button>
+        </div>
+        <div class="scroll-containers">
+            <div class="scroll-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdhdjsfKQDIi27nkeOH-XkR4OJzTCkLOBcbQ&s"
+                    alt="" width="170vw" height="170" vh>
+                <div class="name">Shakes</div>
+            </div>
+            <div class="scroll-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3leYo-wsQneSJT1qBdvyosC_dK8_6CGbODA&s"
+                    alt="" width="170vw" height="170vh">
+                <div class="name">Cake</div>
+            </div>
+            <div class="scroll-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdYYX6X7DHAPMkGhB5Gd8_s4SpWamBrFORXw&s"
+                    alt="" width="170vw" height="170vh">
+                <div class="name">Dessert</div>
+            </div>
+            <div class="scroll-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3NA8E2zCHpTJWS4n4QLqG7KEu8H0mkmb5cQ&s"
+                    alt="" width="170vw" height="170vh">
+                <div class="name">Parathe</div>
+            </div>
+            <div class="scroll-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp5PkK_1kkJmJrQwIlx3xY7IACMZ_IBn8bN7d8A5jr04df-xhiUmpT01jHnCkoiYgMRj8&usqp=CAU"
+                    alt="" width="170vw" height="170vh">
+                <div class="name">Biryani</div>
+            </div>
+            <div class="scroll-container">
+                <img class="pav"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMbZZQtf7gX5iehAMR3RXcpoXyohut_L16WA&s"
+                    alt="" width="170vw" height="170vh">
+                <div class="name">Pav Bhaji</div>
+            </div>
+            <div class="scroll-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJC7t39LRK8XK6iRTXbz0rEtIhOtCYOA4fig&s"
+                    alt="" width="170vw" height="170vh">
+                <span class="name">North Indian</span>
+
+            </div>
+            <div class="scroll-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNDXDmsCLUAF7FWrg0AKyuGmU6IAtKd7lHIw&s"
+                    alt="" width="170vw" height="170vh">
+                <div class="name">South Indian</div>
+            </div>
+            <div class="scroll-container">
+                <img src="https://media.istockphoto.com/id/1421688556/photo/beef-shawarma-on-a-dark-background-shawarma-with-beef-in-pita-bread.jpg?s=612x612&w=0&k=20&c=wAhnmKwTKhukglXVPQBR2FI0w4h07mwpgz0QSTY99e0="
+                    alt="" width="170vw" height="170vh">
+                <div class="name">Shawarma</div>
+            </div>
+            <div class="scroll-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV5mx4GauEs_4KKlsoyrTghh4xjjWJf4-45g&s"
+                    alt="" width="170vw" height="170vh">
+                <div class="name">Pure Veg</div>
+            </div>
+            <div class="scroll-container">
+                <img src="https://i.pinimg.com/originals/1e/e9/e7/1ee9e7f66991da60705615d8da05cc36.jpg" alt=""
+                    width="170vw" height="170vh">
+                <div class="name">Momos</div>
+            </div>
+            <div class="scroll-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQInUPbYsbh0MOImOyFYnZGozToKYlrH-ec8g&s"
+                    alt="" width="170vw" height="170" vh>
+                <div class="name">Chinese</div>
+            </div>
+            <div class="scroll-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdJatd13a8JaR9gF2VuEG8UmhykfvFvT36tQ&s"
+                    alt="" width="170vw" height="170" vh>
+                <div class="name">Pizza</div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 2nd page.....  -->
+    <div class="scroll">
+        <h2>Top Brands</h2>
+        <div class="scroll-containers">
+            <div class="scroll-table" class="kfc">
+                <img class="kfc" src="https://upload.wikimedia.org/wikipedia/sco/b/bf/KFC_logo.svg" alt="" width="170vw"
+                    height="170" vh>
+            </div>
+            <div class="scroll-table">
+                <img src="https://static.vecteezy.com/system/resources/previews/019/909/686/large_2x/burger-king-transparent-burger-king-free-free-png.png"
+                    alt="" width="170vw" height="170vh">
+            </div>
+            <div class="scroll-table">
+                <img src="https://i.pinimg.com/236x/f5/8e/7c/f58e7c41d008e68d35c2fcff2f08b7e3.jpg" alt="" width="170vw"
+                    height="170vh">
+            </div>
+            <div class="scroll-table">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/320px-Starbucks_Corporation_Logo_2011.svg.png"
+                    alt="" width="170vw" height="170vh">
+            </div>
+
+            <div class="scroll-table">
+                <img src="https://upload.wikimedia.org/wikipedia/sco/d/d2/Pizza_Hut_logo.svg" alt="" width="170vw"
+                    height="170vh">
+            </div>
+            <div class="scroll-table">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/768px-Dominos_pizza_logo.svg.png"
+                    alt="" width="170vw" height="170vh">
+            </div>
+            <div class="scroll-table">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Barbeque_Nation_New_Logo.jpg?20181120124913"
+                    alt="" width="170vw" height="170vh">
+
+            </div>
+            <div class="scroll-table">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Baskin-Robbins_logo.svg/320px-Baskin-Robbins_logo.svg.png"
+                    alt="" width="170vw" height="170vh">
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <h1>Our Menu</h1>
+        <div class="columns">
+            <div class="card">
+                <img src="https://www.sawadindiaka.in/wp-content/uploads/2022/01/gajar-halwa-500x500.jpg" alt="Jane"
+                    width="426vw" height=400vh>
+                <div class="container">
+                    <h2>Gajar Halwa</h2>
+                    <p class="titled">Jaggi Sweets</p>
+                    <br>
+                    <span>Rs.70/-</span>
+                    <span>20-30 min</span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="card">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/49845b494b1e637209b7bd1c7ca184ad"
+                    alt="Mike" width="426vw" height=400vh>
+                <div class="container">
+                    <h2>Havmor- Havfunn Ice Cream</h2>
+                    <p class="titled">Ice Cream Parlour</p>
+                    <br>
+                    <span>Rs.200/- </span>
+                    <span>40-45 min</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYyo3hShpKtna1w24YxpqSRNZ5p5ZP2FfTqP_VjejlA&s"
+                    alt="John" width="426vw" height=400vh>
+                <div class="container">
+                    <h2>Belgium Waffels</h2>
+                    <p class="titled">The Waffels Street</p>
+                    <br>
+                    <span>Rs.120/-</span>
+                    <span>20-30 min</span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="card">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2022/11/DY/JE/ZR/135440240/onion-momos-frozen.JPG"
+                    alt="John" width="426vw" height=400vh>
+                <div class="container">
+                    <h2>Wow! Momos</h2>
+                    <p class="titled">Chinese Restaurant</p>
+                    <br>
+                    <span>Rs.70/-</span>
+                    <span>50-55 min</span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="card">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/5/23/81bf516c-205c-44b8-9bb2-74aa62529d26_692689.JPG"
+                    alt="John" width="426vw" height=400vh>
+                <div class="container">
+                    <h2>We Fit- Protien Bowls , Salads</h2>
+                    <p class="titled">South Indian</p>
+                    <br>
+                    <span>Rs.70/-</span>
+                    <span>30-45 min</span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="card">
+                <img src="https://st2.depositphotos.com/49005766/46047/i/380/depositphotos_460474714-stock-photo-idly-idli-south-indian-main.jpg"
+                    alt="John" width="426vw" height=400vh>
+                <div class="container">
+                    <h2>Idli Sambar</h2>
+                    <p class="titled">Madarsi Dosa</p>
+                    <br>
+                    <span>Rs.70/-</span>
+                    <span>30-45 min</span>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="picture">
+        <img src="https://images.unsplash.com/photo-1611864581049-aca018410b97?q=80&w=1988&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="" width="100%">
+        <div class="footer2">
+            <h1>Join our membership and get <br> discount upto 60%.</h1>
+            <button><span onclick="openNav()">Sign In</span></button>
+        </div>
+    </div>
+    <footer id="help">
+        <div class="mainbox">
+            <div class="rbox boox">
+                <h3>Meals On Wheels</h3>
+                <br>
+                <p>Welcome To MealsOnWheels- Your top rated food delivery website that brings your favourite food right
+                    to your doorstep! <br> <br> With just a few clicks,you can easily browse through a wide range of
+                    delicious cuisine and place your order online.</p>
+            </div>
+            <div class="lbox boox">
+                <div class="tbox">
+                    <div class="gbox box0">
+                        <h4>Get in touch</h4>
+                        <br>
+                        <a href="#home">akshatakhare07@gmail.com</a>
+                        <p>9876543210</p>
+                    </div>
+                    <div class="vbox box0" id="klmn">
+                        <h4>Visit Us</h4>
+                        <br>
+                        <p>Mumbai, Maharashtra </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,783 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ruthie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ruthie&display=swap');
+
+.nunito-uniquifier {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #1d1d1df1;
+}
+
+header {
+    display: flex;
+    gap: 800px;
+    position: fixed;  /* Set the heading to fixed position */
+    top: 0;
+    left: 0;   /* Position the navbar at the top of the page */
+    width: 100%;  /* Full width */
+    box-shadow: 0px 0px 5px;
+    padding-bottom: 1px;
+    z-index: 9999;
+    background-color: white;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #060606;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    padding: 14px 16px;
+    text-decoration: none white;
+    font-size: 20px;
+    border-bottom: 4px solid white;
+    background-color: white;
+}
+
+.topnav a:hover {
+    border-bottom: 4px solid red;
+}
+
+.topnav a.active {
+    border-bottom: 3px solid red;
+}
+
+.topnav .sign {
+    background-color: orange;
+}
+
+.topnav a.sign:hover {
+    background-color: orangered;
+}
+
+@media screen and (max-width: 900px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    header {
+        display: inline;
+    }
+}
+
+.sidenav {
+    height: 100%;  /* 100% Full-height */
+    width: 0;  /* 0 width - change this with JavaScript */
+    position: fixed;  /* Stay in place */
+    z-index: 1;  /* Stay on top */
+    top: 0;  /* Stay at the top */
+    right: 0;
+    color: white;
+    background-color: #111111d0;  /* Black*/
+    overflow-x: hidden;  /* Disable horizontal scroll */
+    padding-top: 60px;  /* Place content 60px from the top */
+    transition: 0.5s;  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+span {
+    color: white;
+    background-color: transparent;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 10;
+    right: 0px;
+    font-size: 30px;
+    margin-left: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+input[type=text],
+input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.cancelbtn {
+    padding: 200px 20px;
+    background-color: #365ff4;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,
+.signupbtn {
+    float: left;
+    width: 700%;
+}
+
+/* Add padding to container elements */
+.sidenav .container {
+    margin-top: 10px;
+    height: 670px;
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #fb8e27;
+    cursor: pointer;
+
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+
+    .cancelbtn,
+    .signupbtn {
+        width: 100%;
+    }
+}
+
+.home img {
+    object-fit: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.top-left {
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    background: transparent;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 50px;
+    background: transparent;
+}
+
+/* Dropdown Content (Hidden by Default) */
+option {
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 10px;
+    color: black;
+    font-family: "Nunito", sans-serif;
+    padding: 12px 16px;
+    display: block;
+    background: transparent;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover option {
+    display: block;
+    background-color: #fbcb9d;
+}
+
+select {
+    width: 250%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid white;
+    box-sizing: border-box;
+    color: black;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
+    font-size: 16px;
+    border-radius: 20px;
+    font-family: "Nunito", sans-serif;
+
+}
+
+.top-left h1 {
+    font-size: 60px;
+    font-weight: 600;
+    background: transparent;
+}
+
+.top-left h5 {
+    font-size: 25px;
+    font-weight: 400;
+    background: transparent;
+}
+
+h1 span {
+    font-family: "Ruthie", cursive;
+    color: orange;
+    font-size: 90px;
+    background: transparent;
+}
+
+/* Full-width input fields */
+.modal-content input[type=text],
+.modal-content input[type=password] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.modal-content input[type=text] {
+    font-size: 13px;
+    float: left;
+}
+
+/* Add a background color when the inputs get focus */
+.modal-content input[type=text]:focus,
+.modal-content input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+    scrollbar-width: none;
+}
+
+/* Set a style for all buttons */
+button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: orange;
+    color: rgb(19, 19, 19);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    text-align: left;
+    color: black;
+}
+
+.button {
+    position: absolute;
+    top: 100%;
+    color: rgb(255, 255, 255);
+    font-family: "Noto Sans", sans-serif;
+    text-align: right;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 50px;
+    background-color: rgb(255, 145, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: orangered;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,
+.signupbtn {
+    float: left;
+    width: 60%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 10px 30px;
+    background-color: #f44336;
+    width: 20%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.container h1 {
+    font-size: 30px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed;  /* Stay in place */
+    z-index: 1;  /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 50%;  /* Full width */
+    height: 70%;  /* Full height */
+    padding-left: 22%;
+    padding-top: 140px;
+    background: transparent;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #7f7474;
+    margin: 5% auto 15% auto;  /* 5% from the top, 15% from the bottom and centered */
+    border-radius: 15px;
+    width: 80%;
+    height: 100%;  /* Could be more or less, depending on screen size */
+    padding: 23px;
+    overflow: auto;  /* Enable scroll if needed */
+    background: rgb(0, 0, 0);  /*These all 3 are for transarent image */
+    background: rgba(0, 0, 0, 0.5);  /* Black background with 0.5 opacity */
+    color: #f1f1f1;  /* Grey text */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 21px;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover, .close:focus {
+    color: #b71509;
+    cursor: pointer;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+
+    .cancelbtn,
+    .signupbtn {
+        width: 100%;
+    }
+}
+
+.column {
+    float: left;
+    width: 32%;
+    height: 100%;
+    margin-bottom: 16px;
+    padding: 70px 8px;
+    text-align: center;
+    margin-right: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .home {
+        width: 100%;
+        display: block;
+    }
+}
+
+.Sndpage {
+    padding: 50px 30px;
+    padding-left: 130px;
+    color: white;
+}
+
+.container {
+    padding: 0px 16px;
+    font-family: "Nunito", sans-serif;
+    padding-bottom: 20px;
+}
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    font-size: 19px;
+    color: white;
+}
+
+.container h1 {
+    font-weight: 500;
+    line-height: 2;
+}
+
+.head {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    padding-right: 120px;
+}
+
+.head p {
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.head h1 {
+    font-weight: 700;
+    color: orange;
+}
+
+.head h3 {
+    font-weight: 600;
+}
+
+.offertext {
+    top: 210%;
+}
+
+.offer img {
+
+    object-fit: cover;
+    height: 650px;
+    display: block;
+}
+
+.orange {
+    font-family: "Allura", cursive;
+}
+
+.offertext p {
+    font-size: 20px;
+    background: transparent;
+}
+
+.scroll {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+div.scroll-containers {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-top: 0px;
+    position: relative;
+    background: #1d1d1df1;
+
+    gap: 15px;
+    margin: 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scroll-container img {
+
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+div.scroll-table img {
+
+    padding: 10px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pav {
+    object-fit: cover;
+    border: none;
+}
+
+.name {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    color: white;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.scroll h2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 35px;
+    padding: 30px 60px;
+    padding-bottom: 0px;
+    background: #1d1d1df1;
+    color: rgb(255, 111, 0);
+    z-index: 1;
+}
+
+.scroll-containers::-webkit-scrollbar {
+    width: 5px;
+
+    background: #1d1d1df1;
+}
+
+.scroll-images::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+
+.scroll button:disabled {
+    opacity: 0.5; /* Visual indication for disabled state */
+}
+
+.scroll button {
+    background-color: transparent;
+}
+
+.arrow {
+    padding-left: 85%;
+    display: inline;
+    top: 0px;
+}
+
+.kfc {
+
+    margin-left: 20px;
+}
+
+.row {
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    flex-wrap: wrap;
+    width: 90%;
+    height: 60%;
+    justify-content: center;
+}
+
+.columns {
+    float: left;
+    width: 32%;
+    height: 100%;
+    margin-bottom: 50px;
+    padding: 0 8px;
+    padding-left: 2px;
+    margin-right: 0;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 650px) {
+    .columns {
+        width: 100%;
+        display: block;
+    }
+}
+
+.row h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 35px;
+    padding: 30px 20px;
+    color: rgb(255, 111, 0);
+    z-index: 1;
+}
+
+.card .container {
+    padding: 20px 16px;
+    border-radius: 10%;
+    color: white;
+}
+
+.card .container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    padding-right: 20px;
+    font-weight: 600;
+    color: orange;
+}
+
+.titled {
+    color: white
+}
+
+.picture img {
+    object-fit: cover;
+    height: 400px;
+    background-color: black;
+    filter: brightness(30%);
+    display: block;
+}
+
+.footer2 h1 {
+    padding-left: 75px;
+    position: absolute;
+    top: 570%;
+    left: 25%;
+    text-align: center;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    background-color: transparent;
+}
+
+.footer2 button {
+    position: absolute;
+    top: 590%;
+    left: 45%;
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+}
+
+footer {
+    height: 60vh;
+    color: white;
+    background-color: rgb(27, 26, 26);
+
+}
+
+.mainbox {
+    height: 40vh;
+    padding: 45px;
+    display: flex;
+    gap: 400px;
+}
+
+.boox {
+    font-family: "Nunito", sans-serif;
+    font-size: 17px;
+    padding: 23px;
+    font-weight: 400;
+}
+
+.rbox {
+    width: 600px;
+    font-weight: 100;
+    font-size: 17px;
+}
+
+.rbox h3 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.tbox {
+    display: flex;
+    gap: 90px;
+    height: 40vh;
+    width: 30vw;
+}
+
+.box0 h4 {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.gbox a {
+    color: white;
+    text-decoration: underline;
+}
+
+.gbox a:hover {
+    text-decoration: none;
+    color: burlywood;
+}
+
+.sticky {
+    font-family: "Noto Sans", sans-serif;
+    padding: 5px 170px;
+    margin: 5px 200px;
+    color: white;
+    background-color: transparent;
+}
+
+.boxes {
+    display: flex;
+    gap: 30px;
+    width: 30%;
+    position: fixed;
+    top: 80%;
+    left: 35%;
+
+}
+
+.box img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    align-items: center;
+    padding: 10px;
+}
+
+.box h3 {
+    font-size: 19px;
+    line-height: 2;
+}
+
+.box h4 {
+    font-size: 16px;
+    /* color: wheat; */
+    font-weight: 400;
+    padding-left: 20px;
+    line-height: 2;
+}
+
+.cancel {
+    background-color: red;
+    float: right;
+    margin-left: 200px;
+}
